@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Country data finals" %>
+
+<h1>Country data finals</h1>
+
+<div id="country_data_finals">
+  <% @country_data_finals.each do |country_data_final| %>
+    <%= render country_data_final %>
+    <p>
+      <%= link_to "Show this country data final", country_data_final %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New country data final", new_country_data_final_path %>
+
+
+

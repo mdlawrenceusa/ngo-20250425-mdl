@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  mobilephones: 1.5
+  mortalityunder5: 1.5
+  healthexpenditurepercapita: 1.5
+  healthexpenditureppercentgdp: 1.5
+  population: 1.5
+  populationurban: 1.5
+  birthrate: 1.5
+  lifeexpectancy: 1.5
+  gdp: 1.5
+
+two:
+  name: MyText
+  mobilephones: 1.5
+  mortalityunder5: 1.5
+  healthexpenditurepercapita: 1.5
+  healthexpenditureppercentgdp: 1.5
+  population: 1.5
+  populationurban: 1.5
+  birthrate: 1.5
+  lifeexpectancy: 1.5
+  gdp: 1.5

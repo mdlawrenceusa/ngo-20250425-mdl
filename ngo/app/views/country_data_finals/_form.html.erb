@@ -1,0 +1,67 @@
+<%= form_with(model: country_data_final) do |form| %>
+  <% if country_data_final.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(country_data_final.errors.count, "error") %> prohibited this country_data_final from being saved:</h2>
+
+      <ul>
+        <% country_data_final.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.textarea :name %>
+  </div>
+
+  <div>
+    <%= form.label :mobilephones, style: "display: block" %>
+    <%= form.text_field :mobilephones %>
+  </div>
+
+  <div>
+    <%= form.label :mortalityunder5, style: "display: block" %>
+    <%= form.text_field :mortalityunder5 %>
+  </div>
+
+  <div>
+    <%= form.label :healthexpenditurepercapita, style: "display: block" %>
+    <%= form.text_field :healthexpenditurepercapita %>
+  </div>
+
+  <div>
+    <%= form.label :healthexpenditureppercentgdp, style: "display: block" %>
+    <%= form.text_field :healthexpenditureppercentgdp %>
+  </div>
+
+  <div>
+    <%= form.label :population, style: "display: block" %>
+    <%= form.text_field :population %>
+  </div>
+
+  <div>
+    <%= form.label :populationurban, style: "display: block" %>
+    <%= form.text_field :populationurban %>
+  </div>
+
+  <div>
+    <%= form.label :birthrate, style: "display: block" %>
+    <%= form.text_field :birthrate %>
+  </div>
+
+  <div>
+    <%= form.label :lifeexpectancy, style: "display: block" %>
+    <%= form.text_field :lifeexpectancy %>
+  </div>
+
+  <div>
+    <%= form.label :gdp, style: "display: block" %>
+    <%= form.text_field :gdp %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

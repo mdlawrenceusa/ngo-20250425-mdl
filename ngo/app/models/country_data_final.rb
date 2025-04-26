@@ -1,0 +1,2 @@
+class CountryDataFinal < ApplicationRecord
+end

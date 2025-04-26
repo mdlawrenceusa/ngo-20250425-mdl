@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @country_data_final %>
+
+<div>
+  <%= link_to "Edit this country data final", edit_country_data_final_path(@country_data_final) %> |
+  <%= link_to "Back to country data finals", country_data_finals_path %>
+
+  <%= button_to "Destroy this country data final", @country_data_final, method: :delete %>
+</div>

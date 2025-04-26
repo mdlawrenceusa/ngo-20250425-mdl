@@ -1,0 +1,55 @@
+<%# app/views/queries/results.html.erb %>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Query Results</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <style>
+    .bodyStyle { font-family: Arial, Helvetica, sans-serif; margin: 20px; padding: 0; background-color: #f5f5f5; }
+    .mainHeader { margin-bottom: 20px; }
+    .center { text-align: center; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #4CAF50; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    tr:hover { background-color: #ddd; }
+  </style>
+</head>
+
+<body class="bodyStyle">
+  <div id="header" class="mainHeader">
+    <hr>
+    <div class="center"><h1>Example Social Research Organization</h1></div>
+  </div>
+  <br>
+  <hr>
+  <div class="center"><h2>Results for <%= @title %></h2></div>
+  <br>
+  <h2><%= link_to "Back to Query Page", "/queries" %></h2>
+
+  <% if @countries.present? %>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th><%= @title %></th>
+      </tr>
+      
+      <% @countries.each do |country| %>
+        <tr>
+          <td><%= country.name %></td>
+          <td><%= country[@field] %></td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <p>No results found. Please make sure your database has been populated with data.</p>
+  <% end %>
+
+  <br>
+  <div id="Copyright" class="center">
+    <h5>&copy; 2020, Amazon Web Services, Inc. or its Affiliates. All rights reserved.</h5>
+  </div>
+</body>
+</html>
